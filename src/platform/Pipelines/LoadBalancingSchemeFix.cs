@@ -12,7 +12,7 @@ namespace Sitecore.Demo.Edge.Website.Pipelines
     {
         public override void Process(PreprocessRequestArgs args)
         {
-            throw;
+            throw new Exception("INTENTIONAL BREAK");
             var scheme = HttpContext.Current?.Request?.Headers?[Settings.LoadBalancingScheme];
             if (Settings.LoadBalancingEnabled && (scheme?.Contains(",") ?? false))
             {
