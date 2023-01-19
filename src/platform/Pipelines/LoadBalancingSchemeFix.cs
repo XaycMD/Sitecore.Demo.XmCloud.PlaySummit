@@ -12,6 +12,7 @@ namespace Sitecore.Demo.Edge.Website.Pipelines
     {
         public override void Process(PreprocessRequestArgs args)
         {
+            throw;
             var scheme = HttpContext.Current?.Request?.Headers?[Settings.LoadBalancingScheme];
             if (Settings.LoadBalancingEnabled && (scheme?.Contains(",") ?? false))
             {
